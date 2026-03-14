@@ -25,9 +25,16 @@ set(CMAKE_AUTOMOC ON)
 set(marker_rviz_plugins_headers_to_moc
   include/marker_rviz_plugins/marker_display.hpp
 )
+set(marker_detection_rviz_plugins_headers_to_moc
+  include/marker_rviz_plugins/marker_detection_display.hpp
+)
 
 foreach(header "${marker_rviz_plugins_headers_to_moc}")
   qt5_wrap_cpp(marker_rviz_plugins_moc_files "${header}")
+endforeach()
+
+foreach(header "${marker_detection_rviz_plugins_headers_to_moc}")
+  qt5_wrap_cpp(marker_detection_rviz_plugins_moc_files "${header}")
 endforeach()
 
 ## Here we specify the list of source files.
@@ -37,9 +44,16 @@ src/marker_display.cpp
 src/marker_display_selection_handler.cpp
 )
 
+set(marker_detection_rviz_plugins_source_files
+src/marker_detection_display.cpp
+src/marker_detection_display_selection_handler.cpp
+)
+
 add_library(${PROJECT_NAME} SHARED
   ${marker_rviz_plugins_moc_files}
   ${marker_rviz_plugins_source_files}
+  ${marker_detection_rviz_plugins_moc_files}
+  ${marker_detection_rviz_plugins_source_files}
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC

@@ -7,8 +7,17 @@
     type="marker_rviz_plugins::displays::MarkerDisplay"
     base_class_type="rviz_common::Display">
     <description>
-      Displays a marker_msgs::MarkerStamped message.  &lt;a href="http://www.ros.org/wiki/rviz/DisplayTypes/Pose"&gt;More Information&lt;/a&gt;.
+      Displays position and orientation of fiducials from marker_msgs/MarkerStamped messages.
     </description>
     <message_type>marker_msgs/msg/MarkerStamped</message_type>
+  </class>
+  <class
+    name="marker_rviz_plugins/MarkerDetection"
+    type="marker_rviz_plugins::displays::MarkerDetectionDisplay"
+    base_class_type="rviz_common::Display">
+    <description>
+      Displays position and orientation of fiducials from marker_msgs/MarkerDetection messages.
+    </description>
+    <message_type>marker_msgs/msg/MarkerDetection</message_type>
   </class>
   </library>
