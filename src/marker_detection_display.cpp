@@ -46,7 +46,7 @@
 #include "rviz_rendering/objects/arrow.hpp"
 #include "rviz_rendering/objects/axes.hpp"
 #include "rviz_rendering/objects/shape.hpp"
-#include "marker_rviz_plugins/marker_display_selection_handler.hpp"
+#include "marker_rviz_plugins/marker_detection_display_selection_handler.hpp"
 
 namespace marker_rviz_plugins
 {
